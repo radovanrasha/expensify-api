@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type ExpenseDocument = Expense & Document;
 
-@Schema()
+@Schema({ timestamps: true })
 export class Expense {
   @Prop({ required: true })
   name: string;
